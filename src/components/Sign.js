@@ -25,10 +25,7 @@ firebase.initializeApp({
 }
 export default class Sign extends Component<{}> {
   state = { firstName:'',lastName: '',phoneNumber:'', email: '', password: '', errorMessage: null }
-  static propTypes = {
-    navigation: PropTypes.object,
-   
-  };
+ 
   goBack() {
     Actions.pop();
 };
@@ -38,14 +35,14 @@ export default class Sign extends Component<{}> {
     firebase
     .auth()
     .createUserWithEmailAndPassword(this.state.email, this.state.password)
-    .then(() => this.props.navigation.navigate('Login'))
+    .then(() => this.handleSignUp)
     .catch(error => this.setState({ errorMessage: error.message }))
     console.log('signup done');
     
   };
 
 	render(){
-    const {navigate} = this.props.navigation;
+   
 		return(
 			<View style={styles.container}>
               <TextInput style={styles.inputBox} 
@@ -100,7 +97,7 @@ export default class Sign extends Component<{}> {
               onChangeText={password => this.setState({ password })}
               /> 
 
-           <TouchableOpacity style={styles.button} onPress={ navigate('Login')}>
+           <TouchableOpacity style={styles.button} >
              <Text style={styles.buttonText}>Sign Up</Text>
            </TouchableOpacity>     
   		</View>

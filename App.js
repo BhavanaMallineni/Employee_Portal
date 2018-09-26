@@ -8,7 +8,8 @@ import {
 import {Dimensions} from 'react-native';
 import MapView from 'react-native-maps';
 import Map from './src/components/Map';
-
+import CalendarSample from './src/pages/Calendar';
+import Tasks from './src/pages/Tasks';
 import Routes from './src/Routes';
 const {width,height} =  Dimensions.get('window')
 const SCREEN_HEIGHT= height
@@ -26,7 +27,7 @@ export default class App extends Component<{}> {
            backgroundColor="#1c313a"
            barStyle="light-content"
          />
-         <Map/>
+       <Tasks/>
        
         
       </View>

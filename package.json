@@ -23,14 +23,17 @@
     "color": "3.0.0",
     "expo": "^27.0.1",
     "firebase": "^5.5.0",
+    "lodash.range": "^3.2.0",
     "moment": "2.18.1",
     "prop-types": "^15.6.2",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-calendars": "^1.20.0",
     "react-native-extended-stylesheet": "^0.8.0",
     "react-native-firebase": "^4.3.8",
     "react-native-firebase-phone-auth": "^1.0.4",
     "react-native-maps": "^0.21.0",
-    "react-native-router-flux": "^4.0.1"
+    "react-native-router-flux": "^4.0.1",
+    "react-native-vector-icons": "^5.0.0"
   }
 }
